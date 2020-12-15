@@ -99,7 +99,7 @@ while true; do
 		arquivo
         read -p "Qual arquivo você deseja editar? " edicao
 		if test -f $edicao; then
-           	read -p "Prefere editor nano ou vim? " editor
+            read -p "Prefere editor nano ou vim? " editor
             if [editor == "nano"]; then  
                 nano $edicao
             else
@@ -126,7 +126,7 @@ while true; do
 
     if [ $opcao == "6" ]; then
         arquivo
-		read -p "Escreva qual arquivo você deseja que seja removido na máquina, lembre-se que após deletar esse arquivo não será mais possível recuperar o mesmo, caso não tenha feito o backup. " deleta_arquivo
+		read -p "Escreva qual arquivo você deseja que seja removido na máquina, lembre-se que após deletar esse arquivo não será mais possível recuperar o mesmo, caso não tenha feito o backup. " deletar_arquivo
 		if test -f $deletar_arquivo; then
 			rm -r $deletar_arquivo
 		else
@@ -137,7 +137,7 @@ while true; do
 
     if [ $opcao == "7" ]; then
         diretorio
-		read -p "Escreva qual diretório você deseja que seja removido na máquina, lembre-se que após deletar esse diretório não será mais possível recuperar o mesmo, caso não tenha feito o backup. "
+		read -p "Escreva qual diretório você deseja que seja removido na máquina, lembre-se que após deletar esse diretório não será mais possível recuperar o mesmo, caso não tenha feito o backup. " deletar_diretorio
 		if test -d $deletar_diretorio; then
 			rmdir $deletar_diretorio
 		else
