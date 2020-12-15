@@ -61,7 +61,7 @@ while true; do
 	echo "###########################"
 	read -p "Qual procedimento você deseja executar? Por favor digite a opção abaixo: " opcao
 	
-	if [ $opcao == "1" ]
+	if [ $opcao == "1" ]; then
 		diretorio
 		read -p "Qual diretório que deseja entrar? " diretorio
 		if test -d $diretorio; then
@@ -95,12 +95,12 @@ while true; do
     fi
 
 
-	if [ $opcao == "4" ]:
+	if [ $opcao == "4" ]; then
 		arquivo
         read -p "Qual arquivo você deseja editar? " edicao
 		if test -f $edicao; then
            	read -p "Prefere editor nano ou vim? " editor
-            if [editor == "nano"];then  
+            if [editor == "nano"]; then  
                 nano $edicao
             else
                 vim $edicao
@@ -111,7 +111,7 @@ while true; do
         fi
     fi
 
-	if [ $opcao == "5" ]:
+	if [ $opcao == "5" ]; then
 		arquivo
 		read -p "O arquivo a ser pré-visualizado: " previsao
 		if test -f $previsao; then
@@ -124,7 +124,7 @@ while true; do
         fi
      fi
 
-    if [ $opcao == "6" ]:
+    if [ $opcao == "6" ]; then
         arquivo
 		read -p "Escreva qual arquivo você deseja que seja removido na máquina, lembre-se que após deletar esse arquivo não será mais possível recuperar o mesmo, caso não tenha feito o backup. " deleta_arquivo
 		if test -f $deletar_arquivo; then
@@ -135,7 +135,7 @@ while true; do
         fi
 	 fi
 
-    if [ $opcao == "7" ]:
+    if [ $opcao == "7" ]; then
         diretorio
 		read -p "Escreva qual diretório você deseja que seja removido na máquina, lembre-se que após deletar esse diretório não será mais possível recuperar o mesmo, caso não tenha feito o backup. "
 		if test -d $deletar_diretorio; then
@@ -146,7 +146,7 @@ while true; do
         fi
 	fi
 
-    if [ $opcao == "8" ]:
+    if [ $opcao == "8" ]; then
         arquivo
 		read -p "Qual arquivo você deseja que faça o backup? " backup
 		if test -f $backup_arquivo; then
@@ -158,7 +158,7 @@ while true; do
         fi
 	fi
 
-	if [ $opcao == "9" ]:
+	if [ $opcao == "9" ]; then
         diretorio
         sudo apt-get install rsync
 		read -p "Digite o nome do diretório que deseja fazer o backup. " backup_diretorio
@@ -171,7 +171,7 @@ while true; do
         fi
 	fi
 
-    if [ $opcao == "10" ]:
+    if [ $opcao == "10" ]; then
         arquivo
 		read -p "Qual arquivo você deseja ler? " arquivo_cat
 		if test -f $arquivo_cat; then
@@ -182,7 +182,7 @@ while true; do
         fi
 	fi
 
-    if [ $opcao == "11" ]:
+    if [ $opcao == "11" ]; then
         diretorio
         arquivo
         apt-get install tree
@@ -195,7 +195,7 @@ while true; do
         fi
 	fi
 
-    if [ $opcao == "12" ]:
+    if [ $opcao == "12" ]; then
         arquivo
 		read -p "Qual arquivo você deseja ver a quantidade de bytes? " arquivo_bytes
 		if test -f $arquivo_bytes; then
@@ -206,7 +206,7 @@ while true; do
         fi
 	fi
 
-    if [ $opcao == "13" ]:
+    if [ $opcao == "13" ]; then
         arquivo
         apt-get install zip
 		read -p "Qual arquivo você deseja compactar? " arquivo_compact
@@ -218,7 +218,7 @@ while true; do
         fi
 	fi
 
-    if [ $opcao == "14" ]:
+    if [ $opcao == "14" ]; then
         diretorio
         arquivo
         apt-get install zip
@@ -233,7 +233,7 @@ while true; do
         fi
 	fi
 
-	if [ $opcao == "15" ]:
+	if [ $opcao == "15" ]; then
         arquivo
 		read -p "Qual arquivo deseja visualizar por páginas? " arquivo_pagina
 		if test -f $arquivo_pagina; then
@@ -244,7 +244,7 @@ while true; do
         fi
 	fi
 
-    if [ $opcao == "16" ]:
+    if [ $opcao == "16" ]; then
         arquivo
 		read -p "Qual nome do arquivo que deseja criar? " $arquivo_touch
 		if test -f $arquivo_touch; then
@@ -252,7 +252,7 @@ while true; do
         fi
 	fi
 
-    if [ $opcao == "17" ]:
+    if [ $opcao == "17" ]; then
         diretorio
 		read -p "Qual nome do diretório que deseja criar? " $arquivo_mkdir
 		if test -f $arquivo_mkdir; then
@@ -266,11 +266,11 @@ while true; do
 		sleep 2
     fi
 
-    if [ $opcao == "19" ];then
+    if [ $opcao == "19" ]; then
 		clear
     fi
 
-    if [ $opcao == "20" ];then
+    if [ $opcao == "20" ]; then
 		exit 1
     fi
 done
